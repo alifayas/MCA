@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hover event example</title>
+<style>
+.hover-content{
+display: none;
+text-align: center;
+margin-top: 20px;
+}
+.hovered {
+color: blue;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1 class="hovered">hover over this text!</h1><br>
+<div class="hover-content">
+<img src="video.gif" alt="new image">
+<p>this is new content that appears when you hover over the text.</p>
+</div>
+<script>
+var hoverText = document.querySelector('.hovered');
+var hoverContent = document.querySelector('.hover-content');
+hoverText.addEventListener('mouseover', function () {
+hoverContent.style.display = 'block';
+});
+hoverText.addEventListener('mouseout', function () {
+hoverContent.style.display = 'none';
+});
+</script>
+</body>
+</html>
